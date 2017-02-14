@@ -6,7 +6,17 @@
 # >>> ord('A')
 # 65
 
-max_key_size = 26
+MAX_KEY_SIZE = 26
+
 
 def get_mode():
     '''this function figures our if you'''
+
+
+def get_key():
+    key = 0
+    while True:
+        print('Enter the key number (1-%s)' % (MAX_KEY_SIZE))
+        key = int(input())
+        if (key >= 1 and key <= MAX_KEY_SIZE):
+            return key
