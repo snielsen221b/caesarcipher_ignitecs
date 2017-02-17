@@ -22,9 +22,15 @@ def get_mode():
 
 
 def get_key():
+    '''This function defines the key for your Caesar Cipher.
+    In other words, this will tell you by how many letters 
+    to shift the alphabet in your translated message'''
     key = 0
     while True:
+        # Ask the user how many letters they weant to shift the key by
         print('Enter the key number (1-%s)' % (MAX_KEY_SIZE))
         key = int(input())
+        # Returning exits the infinite while loop and spits back the inputted key value
+        # Only return if the user entered a valid key (in range of the alphabet)
         if (key >= 1 and key <= MAX_KEY_SIZE):
             return key
