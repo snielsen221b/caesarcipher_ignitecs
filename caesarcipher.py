@@ -1,3 +1,5 @@
+# https://inventwithpython.com/chapter14.html
+
 # What is a caesar cipher?
 
 # ASCII/numbers for letters
@@ -17,7 +19,17 @@ def get_mode():
     # everything indented unded the while True: is in the loop
     while True:
         print("Do you wish to encrypt or dycrypt a message?")
+        # input() sets the variable mode equal to what you type
+        # .lower() puts mode in all lowercase
         mode = input().lower()
+
+        # this line checks if the user input is valid (either encrypt or decrypt)
+        # if it is, this function returns the mode
+        if mode == 'encrypt' or mode == 'decrypt':
+            return mode
+        # if the input isn't encrypt or decrypt, the function displays the message
+        else:
+            print('Enter either "encrypt" or "decrypt"')
 
 
 def get_message():
